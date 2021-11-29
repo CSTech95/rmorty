@@ -9,6 +9,9 @@ module.exports = {
       user:    process.env.DB_USER,
       password: null,
     },
+    seeds: {
+      directory: './seeds'
+  },
     pool: {
       min: 2,
       max: 10
