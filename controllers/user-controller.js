@@ -17,6 +17,14 @@ class UserController {
       console.error(err);
     }
   }
+  async findUserByUsername(req, res) {
+    try {
+     const user = await UserService.findUserByUsername(req.body);
+      res.status(201).json(user);
+    } catch (err) {
+      console.error(err);
+    }
+  }
 }
 
 module.exports = new UserController();
