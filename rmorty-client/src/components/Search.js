@@ -4,7 +4,7 @@ import axios from "axios"
 const baseUrl = "https://rickandmortyapi.com/api/character/";
 export const Search = () => {
 
-    const [characters, setCharacters] = useState(null);
+    const [characters, setCharacters] = useState([]);
 
     const getCharacters = (e) => {
         e.preventDefault();
@@ -27,12 +27,12 @@ export const Search = () => {
         } else return;
     }
 
-    useEffect(() => {
-      axios.get(baseUrl).then((response) => {
-        setCharacters(response.data.results);
-    });
-    console.log(characters)
-    }, []);
+    // useEffect(() => {
+    //   axios.get(baseUrl).then((response) => {
+    //     setCharacters(response.data.results);
+    // });
+    // console.log(characters)
+    // }, []);
 
 
     if(!characters) return null
