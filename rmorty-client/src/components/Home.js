@@ -4,10 +4,9 @@ import Signup from "./Signup";
 
 export default function Home() {
     return (
-        <div>
+        <div className="flex space-x-4 items-center content-center">
             <Signup/>
             <Login/>
-            <Search/>
         </div>
     )
 }

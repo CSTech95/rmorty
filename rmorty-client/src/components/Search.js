@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from "axios"
+import Character from './Character';
 
 const baseUrl = "https://rickandmortyapi.com/api/character/";
 export const Search = () => {
@@ -14,11 +15,9 @@ export const Search = () => {
             // react Router to filter through single character api endpoint
             .get(`https://rickandmortyapi.com/api/character/?name=${inputVal}`)
             .then(res => {
-              // console.log(res.data.results);
               const APIcharacter = res.data.results;
               setCharacters( APIcharacter );
               console.log(characters)
-            //   console.log(this.state.APIcharacter);
             })
             .catch(error => {
               // RESEARCH ERROR HANDLING TO FIX THIS
@@ -27,24 +26,23 @@ export const Search = () => {
         } else return;
     }
 
-    // useEffect(() => {
-    //   axios.get(baseUrl).then((response) => {
-    //     setCharacters(response.data.results);
-    // });
-    // console.log(characters)
-    // }, []);
-
-
     if(!characters) return null
-        
+
     return (
-        <div>
-            <form onSubmit={getCharacters} >
-                    <input name="SearchC" style={{ color: 'blue', background: '#F0FFFF', height: '100%', border: 'none' }} type='text' placeholder='Enter Character Name' />
+        <div className="h-screen
+        bg-sky-400">
+            <form className='pb-2' onSubmit={getCharacters} >
+                    <input name="SearchC" style={{ color: 'blue', background: '#F0FFFF', height: '100%', border: 'none', padding: ".3em"}} type='text' placeholder='Enter Character Name' />
                 </form>
-            <div>
+            <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-4">
                 {characters.map( (e)=> 
-                <h1>{e.name}</h1>
+                   
+                    <Character
+                    name={e.name}
+                    image={e.image}
+                    location={e.location.name}
+                    />
+                
             )}
                 </div>
         </div>

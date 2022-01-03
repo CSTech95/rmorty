@@ -14,8 +14,8 @@ const Status = () => {
   }, []);
 
   return (
-    <div style={{ fontSize: "24px" }}>
-      {status ? <button onClick={logout}>Logout</button> : "Please login"}
+    <div className="flex place-content-end pb-2 pr-2">
+      {status ? <button className="w-20 text-sm p-1 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-full" onClick={logout}>Logout</button> : "Please login"}
     </div>
   );
 };
