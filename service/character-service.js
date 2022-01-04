@@ -4,13 +4,13 @@ const characterDAO = require('../dao/character-dao');
 class CharacterService {
 
   getCharacters(Dto) {
-    const { user_id } = Dto;
-    return characterDAO.getCharacters(user_id);
+    const { username } = Dto;
+    return characterDAO.getCharacters(username);
   }
 
   createCharacter(Dto) {
-    const { character_name, status, species, gender, image, user_id } = Dto;
-    return characterDAO.createCharacter(character_name, status, species, gender, image, user_id);
+    const { character_name, status, species, gender, image, username } = Dto;
+    return characterDAO.createCharacter(character_name, status, species, gender, image, username);
 }
 
  deleteCharacter(userDto) {

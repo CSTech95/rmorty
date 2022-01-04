@@ -3,13 +3,13 @@ const db = require('../db/db');
 
 class CharacterDAO {
 
-    async getCharacters(user_id) {
+    async getCharacters(username) {
     const user = await db.from('character')
-      .select('*').where({ user_id })
+      .select('*').where({ username })
       return user
   }
 
-  async createCharacter(character_name, status, species, gender, image, user_id) {
+  async createCharacter(character_name, status, species, gender, image, username) {
     const [id] = await db('character')
       .insert({
         character_name,
@@ -17,7 +17,7 @@ class CharacterDAO {
         species,
         gender,
         image,
-        user_id
+        username
       }).returning('id')
       return id;
   }

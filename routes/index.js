@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
     res.send('Hello World!')
   })
 
-router.get('/characters', CharacterController.getCharacters);
+router.post('/characters', CharacterController.getCharacters);
 router.post('/addcharacter', CharacterController.createCharacter);
 router.post('/deletecharacter', CharacterController.deleteCharacter);
 

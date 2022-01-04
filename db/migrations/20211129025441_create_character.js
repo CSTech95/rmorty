@@ -9,7 +9,7 @@ exports.up = function(knex) {
     table.string('species')
     table.string('gender')
     table.string('image')
-    table.integer('user_id')
+    table.string('username')
 })
 };
 

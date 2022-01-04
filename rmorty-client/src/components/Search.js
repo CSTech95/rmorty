@@ -31,10 +31,10 @@ export const Search = () => {
     return (
         <div className="h-screen
         bg-sky-400">
-            <form className='pb-2' onSubmit={getCharacters} >
+            <form className='p-2' onSubmit={getCharacters} >
                     <input name="SearchC" style={{ color: 'blue', background: '#F0FFFF', height: '100%', border: 'none', padding: ".3em"}} type='text' placeholder='Enter Character Name' />
                 </form>
-            <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-4 p-2">
                 {characters.map( (e)=> 
                    
                     <Character

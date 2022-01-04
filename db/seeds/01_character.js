@@ -5,9 +5,9 @@ exports.seed = function(knex) {
     .then(function () {
       // Inserts seed entries
       return knex('character').insert([
-        {character_name: 'Rick Sanchez', status: 'alive', species: 'human', gender: 'male', image: 'Image1', user_id: 1},
-        {character_name: 'Morty', status: 'alive', species: 'human', gender: 'male', image: 'Image2', user_id: 1},
-        {character_name: 'Susan', status: 'alive', species: 'human', gender: 'female', image: 'Image3', user_id: 2},
+        {character_name: 'Rick Sanchez', status: 'alive', species: 'human', gender: 'male', image: 'https://rickandmortyapi.com/api/character/avatar/13.jpeg', username: "user1"},
+        {character_name: 'Morty', status: 'alive', species: 'human', gender: 'male', image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg', username: "user1"},
+        {character_name: 'Susan', status: 'alive', species: 'human', gender: 'female', image: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg', username: "user2"},
       ]);
     });
 };
