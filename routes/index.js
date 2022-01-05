@@ -11,6 +11,6 @@ router.get('/', (req, res) => {
 
 router.post('/characters', CharacterController.getCharacters);
 router.post('/addcharacter', CharacterController.createCharacter);
-router.post('/deletecharacter', CharacterController.deleteCharacter);
+router.delete('/deletecharacter', CharacterController.deleteCharacter);
 
 module.exports = router;

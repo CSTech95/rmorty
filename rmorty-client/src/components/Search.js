@@ -17,7 +17,6 @@ export const Search = () => {
             .then(res => {
               const APIcharacter = res.data.results;
               setCharacters( APIcharacter );
-              console.log(characters)
             })
             .catch(error => {
               // RESEARCH ERROR HANDLING TO FIX THIS
@@ -36,12 +35,14 @@ export const Search = () => {
                 </form>
             <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-4 p-2">
                 {characters.map( (e)=> 
-                   
-                    <Character
-                    name={e.name}
-                    image={e.image}
-                    location={e.location.name}
-                    />
+                  <div key={e.id}>
+                      <Character
+                      name={e.name}
+                      image={e.image}
+                      location={e.location.name}
+                      />
+                      <button className="text-sm bg-blue-500 hover:bg-blue-700 text-white font-bold p-2 rounded-full">Add</button>
+                  </div> 
                 
             )}
                 </div>
