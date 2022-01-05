@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import axios from "axios"
 import Character from './Character';
+import Pool from "../UserPool";
+
 
 const baseUrl = "https://rickandmortyapi.com/api/character/";
 export const Search = () => {
 
     const [characters, setCharacters] = useState([]);
+    const [character, setCharacter] = useState({}); // To add character to database
 
     const getCharacters = (e) => {
         e.preventDefault();
@@ -25,6 +28,32 @@ export const Search = () => {
         } else return;
     }
 
+    const addCharacter = async (id) => {
+        // console.log(characters.filter(character => character.id == id))
+        const selectedCharacter = characters.filter(character => character.id == id)
+        console.log(selectedCharacter)
+        setCharacter(selectedCharacter)
+        try {
+            let response = await fetch(`http://localhost:3000/addcharacter`, {
+              method: "POST",
+              headers: {
+                'Content-type': 'application/json' // Indicates the content 
+               },
+               body: JSON.stringify({
+                //    id:character[0].id,
+                   character_name: character[0].name,
+                   status: character[0].status,
+                   species: character[0].species, 
+                   gender: character[0].gender,
+                   image: character[0].image,
+                   username: Pool.getCurrentUser().username
+                })
+            });
+          } catch (err) {
+            console.error(err.message);
+          }
+    }
+
     if(!characters) return null
 
     return (
@@ -41,7 +70,7 @@ export const Search = () => {
                       image={e.image}
                       location={e.location.name}
                       />
-                      <button className="text-sm bg-blue-500 hover:bg-blue-700 text-white font-bold p-2 rounded-full">Add</button>
+                      <button onClick={() => addCharacter(e.id)} className="text-sm bg-blue-500 hover:bg-blue-700 text-white font-bold p-2 rounded-full">Add</button>
                   </div> 
                 
             )}
