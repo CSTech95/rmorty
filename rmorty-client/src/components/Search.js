@@ -70,8 +70,8 @@ export const Search = () => {
                       image={e.image}
                       location={e.location.name}
                       />
-                  <div className="w-full grid justify-end p-1">
-                      <button onClick={() => addCharacter(e.id)} className="justify-end text-sm hover:bg-green-500 bg-blue-700 text-white font-bold p-1 px-2 rounded-xl place-self-center">Add</button>
+                  <div className="w-full grid justify-end p-1 content-end">
+                      <button onClick={() => addCharacter(e.id)} className="text-sm hover:bg-green-500 bg-blue-700 text-white font-bold p-1 px-2 rounded-xl place-self-center">Add</button>
                       </div>
                   </div> 
                 

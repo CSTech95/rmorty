@@ -55,8 +55,8 @@ const getCharacters = async () => {
         gender={e.gender}
         species={e.species}
         />
-        <div className="w-full grid justify-end pr-2">
-        <button onClick={() => deleteCharacter(e.id)} className="justify-end text-sm hover:bg-red-500 bg-blue-700 text-white font-bold p-1 px-2 rounded-xl place-self-center">Delete</button>
+        <div className="w-full grid justify-end p-1 content-end">
+        <button onClick={() => deleteCharacter(e.id)} className="text-sm hover:bg-red-500 bg-blue-700 text-white font-bold p-1 px-2 rounded-xl place-self-center">Delete</button>
     </div>
     </div>
                 
