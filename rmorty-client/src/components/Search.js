@@ -64,13 +64,13 @@ export const Search = () => {
                 </form>
             <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-4 p-2 bg-gradient-to-bl from-zinc-900 to-blue-900">
                 {characters.map( (e)=> 
-              <div key={e.id} className="flex m-4 shadow-md shadow-blue-500/50">
+              <div key={e.id} className="flex m-4 shadow-md shadow-blue-500/50 p-1">
                       <Character
                       name={e.name}
                       image={e.image}
                       location={e.location.name}
                       />
-                  <div className="w-full grid justify-end">
+                  <div className="w-full grid justify-end p-1">
                       <button onClick={() => addCharacter(e.id)} className="justify-end text-sm hover:bg-green-500 bg-blue-700 text-white font-bold p-1 px-2 rounded-xl place-self-center">Add</button>
                       </div>
                   </div> 
