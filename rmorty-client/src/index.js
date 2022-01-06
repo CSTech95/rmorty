@@ -6,7 +6,9 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <div className="h-screen App bg-gradient-to-bl from-zinc-900 to-blue-900">
+    <App/>
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );

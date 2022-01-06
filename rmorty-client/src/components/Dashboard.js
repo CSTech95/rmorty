@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import axios from "axios"
 import Pool from "../UserPool";
+import Character from "./Character";
 
 // const user_id = AWS.config.credentials.identityId
 
@@ -43,15 +44,24 @@ const getCharacters = async () => {
 
   return (
     <Fragment>
+      <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-4 p-2 bg-gradient-to-bl from-zinc-900 to-blue-900">
+        
     {characters.map( (e)=> 
-                   <div key={e.id}>
-                     <h1>{e.character_name}</h1>
-                     <img src={e.image}/>
-                     <h1>{e.gender}</h1>
-                     <button className="text-sm bg-blue-500 hover:bg-blue-700 text-white font-bold p-2 rounded-full" onClick={() => deleteCharacter(e.id)}>Delete</button>
-                   </div>
+    <div key={e.id} className="flex m-4 shadow-md shadow-blue-500/50">
+
+      <Character
+        name={e.character_name}
+        image={e.image}
+        gender={e.gender}
+        species={e.species}
+        />
+        <div className="w-full grid justify-end">
+        <button onClick={() => deleteCharacter(e.id)} className="justify-end text-sm hover:bg-red-500 bg-blue-700 text-white font-bold p-1 px-2 rounded-xl place-self-center">Delete</button>
+    </div>
+    </div>
                 
-            )}
+                )}
+                </div>
     </Fragment>
   );
 };

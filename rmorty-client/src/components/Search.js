@@ -58,19 +58,21 @@ export const Search = () => {
 
     return (
         <div className="h-screen
-        bg-sky-400">
+        bg-gradient-to-bl from-zinc-900 to-blue-900">
             <form className='p-2' onSubmit={getCharacters} >
                     <input name="SearchC" style={{ color: 'blue', background: '#F0FFFF', height: '100%', border: 'none', padding: ".3em"}} type='text' placeholder='Enter Character Name' />
                 </form>
-            <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-4 p-2">
+            <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-4 p-2 bg-gradient-to-bl from-zinc-900 to-blue-900">
                 {characters.map( (e)=> 
-                  <div key={e.id}>
+              <div key={e.id} className="flex m-4 shadow-md shadow-blue-500/50">
                       <Character
                       name={e.name}
                       image={e.image}
                       location={e.location.name}
                       />
-                      <button onClick={() => addCharacter(e.id)} className="text-sm bg-blue-500 hover:bg-blue-700 text-white font-bold p-2 rounded-full">Add</button>
+                  <div className="w-full grid justify-end">
+                      <button onClick={() => addCharacter(e.id)} className="justify-end text-sm hover:bg-green-500 bg-blue-700 text-white font-bold p-1 px-2 rounded-xl place-self-center">Add</button>
+                      </div>
                   </div> 
                 
             )}

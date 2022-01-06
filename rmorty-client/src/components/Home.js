@@ -4,9 +4,13 @@ import Signup from "./Signup";
 
 export default function Home() {
     return (
-        <div className="flex space-x-4 items-center content-center">
+        <div className="mt-20 grid gap-4 grid-cols-2 justify-items-center content-center">
+            <div>
             <Signup/>
+            </div>
+            <div>
             <Login/>
+            </div>
         </div>
     )
 }
