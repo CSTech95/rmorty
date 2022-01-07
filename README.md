@@ -28,3 +28,5 @@ Tried to deploy on AWS EC2 but it had a steep learning curve and Spring Semester
 <img width="1440" alt="Screen Shot 2022-01-06 at 11 07 45 PM" src="https://user-images.githubusercontent.com/16457234/148490531-1f8f63ac-e86b-4450-9fb8-75d11f765763.png">
 <img width="1440" alt="Screen Shot 2022-01-06 at 11 07 34 PM" src="https://user-images.githubusercontent.com/16457234/148490626-2393c360-d1ce-43dd-869d-13824d012146.png">
 <img width="1440" alt="Screen Shot 2022-01-06 at 11 07 13 PM" src="https://user-images.githubusercontent.com/16457234/148490686-ce3ce1ff-d7a9-4caa-8420-f5c658d7a37e.png">
+
+<img width="1440" alt="Screen Shot 2022-01-06 at 11 33 23 PM" src="https://user-images.githubusercontent.com/16457234/148492157-9e4753f4-8053-4992-86f0-4357ac795517.png">
