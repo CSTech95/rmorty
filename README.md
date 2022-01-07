@@ -1,6 +1,6 @@
 # rmorty
 FULL STACK APP >
-| React.JS | Express.js | Knex.js | AWS Cognito | PostgreSQL | Tailwind.css 
+| React.JS | Express.js | Knex.js | AWS Cognito (For Authenticating Users) | PostgreSQL | Tailwind.css 
 
 Table Schema >
 CREATE TABLE character( id serial PRIMARY KEY, character_name VARCHAR(255), status VARCHAR(255), species VARCHAR(255), gender VARCHAR(255), image VARCHAR(255), username VARCHAR ( 255 ) );
