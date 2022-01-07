@@ -5,6 +5,10 @@ FULL STACK APP >
 Table Schema >
 CREATE TABLE character( id serial PRIMARY KEY, character_name VARCHAR(255), status VARCHAR(255), species VARCHAR(255), gender VARCHAR(255), image VARCHAR(255), username VARCHAR ( 255 ) );
 
+When cursor is hovered over add button it turns green.
+When cursor is hovered over delete button it turns red.
+When cursor is hovered over nav links it turns light green.
+
 Tried to deploy on AWS EC2 but it had a steep learning curve and Spring Semester is coming soon and I will have a heavy course load. I then looked to Heroku but got errors. Here are screenshots until I learn how to deploy. I am taking a cloud computing class this semester. Wish me luck!
 
 <img width="1440" alt="Screen Shot 2022-01-06 at 11 05 23 PM" src="https://user-images.githubusercontent.com/16457234/148490855-419e6d98-8926-4c5f-90f1-42f388df6f9d.png">
