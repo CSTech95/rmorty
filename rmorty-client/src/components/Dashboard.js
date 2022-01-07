@@ -10,7 +10,7 @@ const ListTodos = () => {
 
   const deleteCharacter = async id => {
     try {
-      let response = await fetch(`http://localhost:3000/deletecharacter`, {
+      let response = await fetch(`/deletecharacter`, {
         method: "DELETE",
         headers: {
           'Content-type': 'application/json' // Indicates the content 
@@ -27,7 +27,7 @@ const ListTodos = () => {
 
 const getCharacters = async () => {
   try {
-    await axios.post("http://localhost:3000/characters", {username:Pool.getCurrentUser().username})
+    await axios.post('/characters', {username:Pool.getCurrentUser().username})
     .then((res)=>{
       setCharacters(res.data)
     })

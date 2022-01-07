@@ -31,7 +31,7 @@ const Login = () => {
           value={username}
           onChange={(event) => setusername(event.target.value)}
         ></input>
-        <label htmlFor="password" className="text-sm pb-2">Password</label>
+        <label htmlFor="password" className="text-sm text-center pb-2">Password</label>
         <input
         className="w-40 h-7 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           value={password}

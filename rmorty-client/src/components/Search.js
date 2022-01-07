@@ -34,7 +34,7 @@ export const Search = () => {
         console.log(selectedCharacter)
         setCharacter(selectedCharacter)
         try {
-            let response = await fetch(`http://localhost:3000/addcharacter`, {
+            let response = await fetch(`/addcharacter`, {
               method: "POST",
               headers: {
                 'Content-type': 'application/json' // Indicates the content 
