@@ -6,7 +6,7 @@ const router = express.Router();
 const CharacterController = require('../controllers/character-controller');
 
 router.get('/', (req, res) => {
-    res.send('Hello World!')
+    res.send(path.join(__dirname, "client/build/index.html"))
   })
 
 router.post('/characters', CharacterController.getCharacters);
